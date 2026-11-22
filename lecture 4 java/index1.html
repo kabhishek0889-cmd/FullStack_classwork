@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Events</h2>
+
+    <button id="clickBtn">Click Me</button>
+
+    <div id="box" style="padding: 20px; background: lightblue; margin: 10px 0">
+      Move your mouse over this box
+    </div>
+
+    <input type="text" id="keyInput" placeholder="Type something" />
+
+    <form id="myForm">
+      <input type="text" id="username" placeholder="Enter username" required />
+      <input type="email" id="email" placeholder="Enter email" required />
+      <button type="submit">Submit</button>
+          <button id="resetBtn" type="reset">Reset</button>
+    </form>
+
+    
+    
+</body>
+<script>
+    var btn = document.querySelector("#clickBtn");
+    var box = document.querySelector("#box");
+    var keyInput = document.querySelector("#keyInput");
+    var form = document.querySelector("#myForm");
+    var email = document.querySelector("#email");
+    var resetBtn = document.querySelector("#resetBtn");
+    btn.addEventListener('click',()=>{
+        console.log("Click buttom has been triggred")
+    })
+    btn.addEventListener('dblclick', ()=>{
+        alert("Double click !!!")
+    })
+    box.addEventListener("mouseover",()=>{
+        box.style["background-color"] = "red"
+    })
+    box.addEventListener('mouseout', ()=>{
+        box.style["background-color"] = "lightblue"
+    })
+
+    box.addEventListener("mousemove",(event) =>{
+        box.innerHTML = `X : ${event.clientX} Y: ${event.clientY}`
+    })
+
+    box.addEventListener('mousedown',()=>{
+        box.style["background-color"] = "yellow"
+    })
+    box.addEventListener('mouseup',()=>{
+        box.style["background-color"] = "green"
+    })
+    keyInput.addEventListener('keydown', (event) => {
+        console.log(`Key down: ${event.key} Code: ${event.code}`);
+
+        if(event.key === "E"){
+            alert("You pressed the 'E' key")
+        }
+    });
+    // keyInput.addEventListener('keyup', (event) => {
+    //     console.log(`Key up: ${event.key} Code: ${event.code}`);
+    // });
+
+    
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent form submission
+        const username = document.querySelector("#username").value;
+        const email = document.querySelector("#email").value;
+        console.log(`Form submitted with Username: ${username}, Email: ${email}`);
+    });
+
+
+    email.addEventListener('blur', () =>{
+        email.style["background-color"] = "white"
+    })
+    email.addEventListener('focus', () =>{
+        email.style["background-color"] = "green"
+    })
+    resetBtn.addEventListener('click', () =>{
+        console.log("Reset button has been clicked")
+    })
+
+</script>
+</html>

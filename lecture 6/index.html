@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/submit" method="get" autocomplete="on">
+       <input type="radio" name = "gender" id = "male">
+       <label for = "gender">Female:</label>
+       <label for = "male">Male :</label>
+       <input type="radio"  id = "gender" name="gender"> 
+       <br> 
+        <label for = "city">select your city:</label>
+            <select name="city" id="city" multiple size="1" required>
+                <option value="">-- select your city--</option>
+                <option value="delhi">Delhi</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="kolkata">Kolkata</option>
+                <option value="chennai">Chennai</option>
+
+            </select>
+            <br><br>
+
+            <label for = "city">City :</label>
+            <input type = "text" id = "city" name="city" list="cities"/>
+            <datalist id = "cities">
+                <option value="Delhi"> Delhi</option>
+                <option value="kolkata"> kolkata</option>
+                <option value="up"> up</option>
+                <option value="bihar"> bihar</option>
+            </datalist>
+            <br><br>
+          <fieldset >
+            <legend>Personal Information</legend>
+            <label for="namer">Full Name</label>
+            <input type="text" id = "namer" placeholder="">
+
+          </fieldset>
+
+        
+    </form>
+    <br><br>
+    <header>
+        <h1>Registation Form</h1>
+        <fieldset>
+             
+             <legend>personal Info</legend>
+        <form action="/submit" method= "get" autocomplete="on">
+
+            <label for = "name"> Full Name</label>
+            <input type="text" id = "name" placeholder="Enter your name" required><br><br>
+            <label for = "email"> Email :</label>
+            <input type="text" id = "email" placeholder="Enter your email" required><br><br>
+            <label for = "password"> Password:</label>
+            <input type="password" id = "password" placeholder="enter your " required><br><br>
+            <label for = "phone">phone Number</label>
+            <input type="tel" id = "phone" placeholder="99999999999" required>
+            
+
+            <label for=""></label>
+
+
+        </form>
+        </fieldset>
+
+        <form action="/submit" method="get" autocomplete="on" >
+
+            <fieldset>
+                <legend>Academic Information</legend>
+                <label for="course" name = "course" > Select Course:</label>
+                <select name="course" id="course">
+                <option value="">--Select Course--</option>
+                <option value="cse">cse</option>
+                <option value="bca">bca</option>
+                <option value="mba">mba</option>
+                </select><br><br>
+                
+                <label for="skills" name = "skill">Know Programming Languages:</label>
+                <select name="skill" id="skills" >
+                    <option value="html"> html</option>
+                    <option value="css">css</option>
+                    <option value="js">js</option>
+                    <option value="java">java</option>
+                </select>
+                <br><br>
+                <label for="Age"> Age:</label>
+                <input type="number" placeholder="enter" required><br><br>
+
+                <label for="programming">Programming skill:</label>
+                <input type="range" min="20" max="80">
+
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Skills & Interest</legend>
+                <p>Select your skills:</p>
+                <input type="checkbox" id "html" name="progrraming">
+                <label for="html">Html:</label>
+                <input type="checkbox" id "html" name="progrraming">
+                <label for="html" >CSS:</label>
+                <input type="checkbox" id "html" name="progrraming">
+                <label for="html">javascript:</label><br><br>
+                <label for = "portfolio">Portfolio Website:</label>
+                <input type="url" id = "portfolio" placeholder="enter your url" required>
+                <br><br>
+                <label for="color"> Fav Color:</label>
+                <input type="color" id = "color">
+
+               
+            
+               
+            </fieldset>
+            <fieldset>
+                <legend>File uploads</legend>
+                <label for="resume"> Upload Resume:</label>
+                <input type="file" id= "resume" required>
+                
+            </fieldset>
+        </form>
+
+
+        
+       
+    </header>
+
+</body>
+
+</html>

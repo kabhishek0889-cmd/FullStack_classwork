@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: green;
+}
+header h1 {
+    padding-top:30px;
+    color: azure;
+    font-size: 40px;
+
+}
+header p{
+    padding-top: 20px;
+    color: azure;
+    font-size: 25px;
+
+}
+header nav{
+    display: flex ;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    
+
+}
+header nav a{
+    color: aliceblue;
+    text-decoration: none;
+    /* border: 1px solid black; */
+    padding: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: capitalize;
+    
+    
+}

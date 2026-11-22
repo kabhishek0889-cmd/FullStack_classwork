@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="startTimeOut">Start TimeOut</button>
+    <button id="endTimeOut">Stop TimeOut</button>
+
+    <button id="startInterval">Start Interval</button>
+    <button id="endInterval">Stop Interval</button> 
+
+    
+</body>
+<script>
+    // var timeOut = document.querySelector("#startTimeOut");
+    // var id = null
+    
+
+    // var fun = (name)=>{
+    //         console.log("hello",name)}
+            
+    // var endTimeOut = document.querySelector("#endTimeOut");
+    // timeOut.addEventListener("click",()=>{
+    //     id = setTimeout(fun,3000,"John");
+    //     console.log(id);
+    // })
+
+    // var startInterval = document.querySelector("#startInterval");
+    // var endInterval = document.querySelector("#endInterval");
+
+    var count = (name)=>{
+        console.log("hello",name)
+    }
+
+    var intervalId = null;
+    startInterval.addEventListener("click",()=>{
+        intervalId = setInterval(count,2000,"John");
+
+    })
+
+    endInterval.addEventListener("click", ()=>{
+        clearInterval(intervalId);
+    });
+
+
+
+    // endTimeOut.addEventListener("click", ()=>{
+        
+    // })
+
+
+    var prom = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("promised resolved");
+        },3000)
+    })
+
+    prom
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err))
+    .finally(() => console.log("done"))   
+    
+    var asynFun = async()=>{
+        await setTimeout(()=>{
+            console.log("hello");
+        },3000)
+    }
+
+</script>
+</html>

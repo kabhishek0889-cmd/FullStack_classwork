@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Todo List</h1>
+    <form id="todoForm">
+        <input type="text" id="todoInput" placeholder="Enter a task" required />
+        <button type="submit">Add Task</button>
+    </form>
+
+    <div id="todoList"></div>
+
+
+</body>
+<script>
+    const todoForm = document.querySelector("#todoForm");
+    const todoInput = document.querySelector("#todoInput");
+    const todoList = document.querySelector("#todoList");
+    var tasks = [];
+    var updateIndex = null;
+
+    todoForm.addEventListener("submit", (event) =>{
+        event.preventDefault();
+        if (updateIndex !== null) {
+            tasks[updateIndex] = todoInput.value;
+            updateIndex = null;
+            todoForm.querySelector("button").textContent = "Add Task";
+        } else {
+            tasks.push(todoInput.value);
+        }
+        todoInput.value = "";
+        addEle();
+
+    })
+    
+
+    function addEle(){
+        todoList.innerHTML = "";
+        tasks.forEach((data,index) =>{
+            todoList.innerHTML += `<div class="task">
+                <span>${data}</span>
+                <button onclick="deleteTask(${index})">Delete</button>
+                <button onclick="editTask(${index})">Edit</button>
+            </div>`;
+        })
+    }
+    function editTask(index){
+        todoInput.value = tasks[index];
+        todoForm.querySelector("button").textContent = "Update Task";
+        updateIndex = index;
+
+
+    }
+
+    function deleteTask(index){
+        tasks = tasks.filter((data, i) => i !== index);
+        addEle();
+    }
+
+  
+</script>
+</html>

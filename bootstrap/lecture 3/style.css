@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    
+}
+header div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#topHead{
+    background-color: lightpink;
+    padding: 10px 20px;
+}
+#topHead > div{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+#bottomHead{
+    background-color:antiquewhite;
+    padding: 10px 20px;
+}
+#bottomHead > div{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+#bottomHead > nav {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    
+}
+main{
+    width: 100%;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    padding: 20px;
+    background-color: lightgray;
+}
+
+#banner{
+    width: 100%;
+    display: flex;
+    /* color: white; */
+    gap: 20px;
+    margin: 20px 0;
+
+
+}
+#applybtn{
+    background-color: lightpink;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+}
+
